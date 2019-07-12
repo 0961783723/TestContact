@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestAddNew"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Contact"
+            android:id="@+id/btnAdd_Contact"
+            android:onClick="btnAdd_Contact_onClick"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Firstname"
+            android:ems="10"
+            android:id="@+id/txtFirstname"
+            android:layout_marginTop="36dp"
+            android:layout_alignLeft="@+id/txtTelephone"
+            android:layout_alignStart="@+id/txtTelephone"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txtTelephone"
+            android:layout_alignTop="@+id/lblTelephone"
+            android:layout_alignLeft="@+id/btnAdd_Contact"
+            android:layout_alignStart="@+id/btnAdd_Contact"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Firstname"
+            android:id="@+id/lblName"
+            android:layout_alignTop="@+id/txtFirstname"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Telephone"
+            android:id="@+id/lblTelephone"
+            android:layout_below="@+id/txtFamilyname"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Familyname"
+            android:id="@+id/lblFamilyname"
+            android:layout_below="@+id/txtFirstname"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="21dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Famiyname"
+            android:ems="10"
+            android:id="@+id/txtFamilyname"
+            android:layout_alignTop="@+id/lblFamilyname"
+            android:layout_alignLeft="@+id/txtTelephone"
+            android:layout_alignStart="@+id/txtTelephone"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/txtEmail"
+            android:layout_below="@+id/txtTelephone"
+            android:layout_alignLeft="@+id/txtTelephone"
+            android:layout_alignStart="@+id/txtTelephone"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Email:"
+            android:id="@+id/lblEmail"
+            android:layout_alignTop="@+id/txtEmail"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/spPhoneContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEmail"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginHorizontal="90dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/spPhoneContact"
+            android:layout_marginTop="5dp"
+            android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btnGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Group" />
+
+                <Button
+                    android:id="@+id/btnTune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tune" />
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Send" />
+        </LinearLayout>
+
+    </RelativeLayout>
